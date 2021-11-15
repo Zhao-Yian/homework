@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>444</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>手势识别应用</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow{
+	background-color: rgb(101, 124, 138);
+}
+QWidget{
+	background-color: rgb(240, 242, 247);
+}
+
+QPushButton{
+	background-color: rgb(224, 228, 236);
+	border: 2px solid rgb(47, 42, 95);
+	border-radius: 10px;
+	padding: 5px 15px;
+	font: 75 10pt &quot;微软雅黑&quot;;
+	color: rgb(0,0,0);
+}
+
+QPushButton:hover{
+background-color: rgb(220, 220, 220);
+	border: 1.5px solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.36 rgba(28, 17, 145, 255), stop:0.6 rgba(126, 14, 81, 255), stop:0.75 rgba(234, 11, 11, 255), stop:0.79 rgba(244, 70, 5, 255), stop:0.86 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));
+	border-radius: 10px;
+	padding: 5px 15px;
+	font: 75 10pt &quot;微软雅黑&quot;;
+	color:  rgb(170, 68, 59);
+}
+
+QPushButton:pressed{
+background-color: rgb(220, 220, 220);
+	border: 3px solid rgb(47, 42, 95);
+	border-radius: 10px;
+	padding: 5px 15px;
+	font: 75 10pt &quot;微软雅黑&quot;;
+	color:rgb(170, 68, 59);
+}
+
+QGroupBox{
+	font: 75 12pt &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+}
+
+QLabel{ 
+	font: 40 12pt &quot;微软雅黑&quot;;
+	color: rgb(0, 0, 0);
+}
+
+QTableWidget{
+	border: 1.5px solid rgb(0, 0, 127);
+	border-radius: 5px;
+}
+
+QTableWidget:hover{
+	border: 1.5px solid rgb(85, 0, 0);
+	border-radius: 5px;
+}
+
+QPlainTextEdit{
+	background-color: rgb(240, 242, 247);
+	border: 1.5px solid rgb(0, 0, 127);
+	border-radius: 5px;
+	font: 12pt &quot;仿宋&quot;;
+}
+
+QPlainTextEdit:hover{
+	border: 1.5px solid rgba(0, 0, 127, 80);
+	border-radius: 5px;
+}
+
+QLineEdit{
+	border: 1.5px solid rgb(0, 0, 127);
+	border-radius: 5px;
+}
+
+QTabWidget::pane { 
+    border: 1px solid rgb(0, 0, 127);
+    position: absolute;
+}</string>
+  </property>
+  <widget class="QWidget" name="window">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>选择图片</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>选择图片</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="text">
+           <string>打开摄像头</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>ResNet50预测</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>预测结果：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>444</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
